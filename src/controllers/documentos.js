@@ -10,6 +10,7 @@ const {
 exports.Insert = (req, res) => {
   const data = req.body;
   data.usuarioId= req.user.id;
+  
   Documento.create(data)
     .then((documento) => {
       if (documento) {
